@@ -15,4 +15,3 @@ Phase Two:
 - [X] ~~Simple refactoring like renaming variables~~ (already implemented)
 - [X] Re-indenting files - *Ruben*
 - [ ] Show inline documentation/standard library when using standard functions
-
