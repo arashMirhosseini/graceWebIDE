@@ -1,5 +1,5 @@
-index.html
-scripts/background.js
+#index.html
+#scripts/background.js
 # Logs
 logs
 *.log
@@ -30,7 +30,7 @@ scripts/minigrace.js
 scripts/setup.js
 
 # Grace js files
-js/
+#js/
 
 # included git repository
 brace
