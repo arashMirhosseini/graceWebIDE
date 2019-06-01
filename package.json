@@ -8,12 +8,13 @@
   ],
   "dependencies": {
     "brace": "0.11.1",
+    "filesaver.js": "0.2.x",
     "jquery": "2.1.x",
-    "jquery-ui": "1.10.x",
+    "jquery-ui": "^1.12.1",
+    "jszip": "3.1.x",
     "setimmediate": "1.x",
     "sweetalert": "1.x",
-    "jszip": "3.1.x",
-    "filesaver.js": "0.2.x"
+    "xterm": "^3.13.2"
   },
   "devDependencies": {
     "browserify": "9.x",
