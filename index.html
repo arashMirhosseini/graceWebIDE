@@ -6,7 +6,9 @@
     <title>Grace Editor</title>
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
-
+    <link rel="stylesheet" href="node_modules/xterm/dist/xterm.css" />
+    
+    <script src="node_modules/xterm/dist/xterm.js"></script>
     <script src="js/minigrace.js" type="text/javascript"></script>
     <script src="js/gracelib.js" type="text/javascript"></script>
     <script src="js/debugger.js" type="text/javascript"></script>
@@ -92,7 +94,6 @@
       }
     });
   </script>
-
     <nav id="left-sidebar" class="vertical no-select fill-height">
       <div id="files-view" class="fill sidebar-view">
         <header id="file-header" class="header horizontal">
@@ -113,6 +114,40 @@
         </header>
         <input id="upload-input" type="file" multiple>
         <ul id="file-tree" class="fill body"  oncontextmenu="return false;"></ul>
+      	<form>Local Path:<input type="text" name="local-disk-path" placeholder="..." autocomplete="on">	</form>
+        <form>GitHub URL:<input type="url" name="github-url" placeholder="URL:GitHub Repo.." autocomplete="on"></form>      
+        <form> run git
+        	<select name="git commands">
+          	<option value="clone">clone</option>
+  			<option value="add">add</option>
+  			<option value="commit">commit</option>
+  			<option value="pull">pull</option>
+  			<option value="push">push</option>
+			</select>        
+        </form>        
+		<form>
+			<input type="button" value="Launch Terminal" onclick="launchTerminal()"> 
+				<script>
+				function launchTerminal() {
+        			var term = new Terminal();
+        			term.open(document.getElementById('terminal'));
+        			term.write('$')
+        			let myBuffer = [];
+
+        			// This is an xterm.js instance
+        			term.on('key', function(key, e) {
+        			  myBuffer.push(key);
+        			});
+
+        			term.on('lineFeed', function() {
+        			  let keysEntered = myBuffer.join('');  // Or something like that
+        			  myBuffer = [];  // Empty buffer
+        			});
+        			
+				}
+      			</script>
+		</form> 
+		<form> <div id="terminal"></div></form>   
       </div>
 
       <div id="settings-view" class="hidden fill sidebar-view">
