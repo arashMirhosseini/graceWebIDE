@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
 
+
     <script src="js/minigrace.js" type="text/javascript"></script>
     <script src="js/gracelib.js" type="text/javascript"></script>
     <script src="js/debugger.js" type="text/javascript"></script>
@@ -58,6 +59,14 @@
         ],
         "res/");
     </script>
+    <script>
+      var Git = require("nodegit");
+      function myFunction() {
+        Git.Clone("https://github.com/nodegit/nodegit", "nodegit_testing").then(function (repository) {
+          console.log("cloning");
+        });
+      }
+    </script>
   </head>
 
   <body class="horizontal">
@@ -70,6 +79,8 @@
       }
     });
   </script>
+  
+  <button type="button" onclick="myFunction()">Test</button>
 
     <nav id="left-sidebar" class="vertical no-select fill-height">
       <div id="files-view" class="fill sidebar-view">

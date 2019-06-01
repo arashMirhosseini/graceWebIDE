@@ -8,16 +8,17 @@
   ],
   "dependencies": {
     "brace": "0.11.1",
-    "jquery": "2.1.x",
-    "jquery-ui": "1.10.x",
-    "setimmediate": "1.x",
-    "sweetalert": "1.x",
+    "filesaver.js": "0.2.x",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
     "jszip": "3.1.x",
-    "filesaver.js": "0.2.x"
+    "nodegit": "^0.24.3",
+    "setimmediate": "1.x",
+    "sweetalert": "1.x"
   },
   "devDependencies": {
-    "browserify": "9.x",
-    "eslint": "0.15.x"
+    "browserify": "^16.2.3",
+    "eslint": "^5.16.0"
   },
   "main": "scripts/boot.js",
   "scripts": {
