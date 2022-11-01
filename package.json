@@ -16,8 +16,8 @@
     "filesaver.js": "0.2.x"
   },
   "devDependencies": {
-    "browserify": "9.x",
-    "eslint": "0.15.x"
+    "browserify": "17.x",
+    "eslint": "8.26.x"
   },
   "main": "scripts/boot.js",
   "scripts": {
